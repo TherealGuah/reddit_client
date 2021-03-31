@@ -1,2 +1,0 @@
-# Color Pallete and CSS
-
