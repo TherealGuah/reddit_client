@@ -1,0 +1,16 @@
+#toggle i {
+    font-size: 3rem;
+}
+#toggle p {
+    width: 75px;
+    margin: 10%;
+}
+@media only screen and (max-width: 425px) {
+    div p {
+        display: none;
+    }
+
+    #toggle i {
+        font-size: 2rem;
+    }
+}
