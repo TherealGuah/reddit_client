@@ -16,8 +16,17 @@ header a {
     text-decoration-line: none;
     color: inherit;
 }
-@media only screen and (max-width: 425px) {
-    header h1 {
+#logo {
+    width: 150px;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 480px) {
+    header p {
         display: none;
+        margin: 10%;
+    }
+    #logo {
+        width: 50px;
     }
 }

@@ -9,15 +9,15 @@ import { useDispatch } from 'react-redux';
 export function Header() {
     const dispatch = useDispatch();
     const handleClick = () => {
-        //dispatch(changeActiveSubreddit("/r/Home/"));
+        dispatch(/*changeActiveSubreddit("/r/Home/")*/);
     }
     
     return (
         <header>
             <Link to="/">
-                <div onClick={handleClick}>
+                <div onClick={handleClick} id="logo">
                     <img  id="redditLogo" src={redditLogo} alt="reddit logo"/>
-                    <h1>Reddit Client</h1>
+                    <p>Reddit Client</p>
                 </div>
             </Link>
             <SearchBar />

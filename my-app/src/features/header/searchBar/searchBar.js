@@ -1,4 +1,6 @@
 import React from 'react';
+import './searchBar.css';
+
 
 export function SearchBar() {
 
@@ -7,6 +9,7 @@ export function SearchBar() {
             <input 
                 id="searchBar" 
                 placeholder="Search for Posts"
+                type="text"
             />
             <button><i class="fas fa-search"></i></button>
         </div>

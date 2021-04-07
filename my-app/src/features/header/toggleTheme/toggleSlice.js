@@ -9,6 +9,7 @@ const options = {
 };
 
 export const toggleThemeSlice = createSlice(options);
+export const selectTheme = state => state.toggle;
 export const { toggleTheme } = toggleThemeSlice.actions;
 export default toggleThemeSlice.reducer;
 
