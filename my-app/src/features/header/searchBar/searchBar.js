@@ -1,8 +1,20 @@
 import React from 'react';
 import './searchBar.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { 
+    selectSearchTerm,
+    newSearchTerm
+} from './searchSlice';
 
 
 export function SearchBar() {
+    const dispatch = useDispatch();
+    const searchTerm  = useSelector(selectSearchTerm);
+
+
+    const handleTextChange = (event) => {
+        dispatch(newSearchTerm(event.target.value))
+    };
 
     return (
         <div>
@@ -10,8 +22,11 @@ export function SearchBar() {
                 id="searchBar" 
                 placeholder="Search for Posts"
                 type="text"
-            />
-            <button><i class="fas fa-search"></i></button>
+                value={searchTerm}
+                onChange={handleTextChange}
+            >
+            </input>
+            <button id="searchButton"><i class="fas fa-search"></i></button>
         </div>
     );
 };

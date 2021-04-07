@@ -17,7 +17,7 @@ export function Header() {
             <Link to="/">
                 <div onClick={handleClick} id="logo">
                     <img  id="redditLogo" src={redditLogo} alt="reddit logo"/>
-                    <p>Reddit Client</p>
+                    <p><span className="bolder">Reddit</span> Client</p>
                 </div>
             </Link>
             <SearchBar />

@@ -4,6 +4,8 @@ header {
     align-items: center;
     border: 1px solid black;
     height: 75px;
+    background-color: rgb(95,158,160);
+    color: rgb(255,249,220);
 }
 header div {
    display: flex;
@@ -20,11 +22,17 @@ header a {
     width: 150px;
     justify-content: space-between;
 }
+#logo p {
+    margin: 10%;
+}
+.bolder {
+    font-weight: 900;
+    font-size: 1.5rem;
+}
 
 @media only screen and (max-width: 480px) {
     header p {
         display: none;
-        margin: 10%;
     }
     #logo {
         width: 50px;
