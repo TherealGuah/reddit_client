@@ -1,6 +1,8 @@
 import React from 'react';
 import {
   BrowserRouter as Router,
+  Switch,
+  Route
 } from "react-router-dom";
 
 import './App.css';
@@ -9,10 +11,16 @@ import { Header } from '../features/header/header';
 function App() {
   return (
   <Router>
+    {/* Common Header for all SPA*/}
     <Header />
-    <main>
-      <h1>Here be Main</h1>
-    </main>
+    <Switch>
+      <Route exact path="/individualPost">
+        {/* <Post /> */}
+      </Route>
+      <Route exact path="/">
+        {/* <PostsList /> */}
+      </Route>
+    </Switch>
   </Router>);
 }
 
