@@ -26,7 +26,7 @@ export function SearchBar() {
                 onChange={handleTextChange}
             >
             </input>
-            <button id="searchButton"><i class="fas fa-search"></i></button>
+            <button id="searchButton"><i className="fas fa-search"></i></button>
         </div>
     );
 };
