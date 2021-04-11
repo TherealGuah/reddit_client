@@ -5,7 +5,7 @@ export const getSubReddits = async () => {
     const response = await fetch(url);
     const json = await response.json();
     const jsonResponse = json.data.children.map( subReddit => subReddit.data);
-    console.log(jsonResponse);
+    //console.log(jsonResponse);
     return jsonResponse;
 }
 

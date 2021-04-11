@@ -2,6 +2,7 @@ import React from 'react';
 import './subReddits.css';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 //API json
 import { getSubReddits } from '../../../app/API/Reddit';
 //selectors + actions
@@ -15,10 +16,10 @@ import {
 
 
 
-export function SubReddits() {
+export function SubReddits(props) {
     const dispatch = useDispatch();
     const subReddits = useSelector(selectSubReddits);
-    const subReddit = useSelector(selectSubReddit);
+    const selectedSubReddit = useSelector(selectSubReddit);
     
     useEffect( () => {
         getSubReddits().then(jsonResponse => {
@@ -34,14 +35,20 @@ export function SubReddits() {
             })
     }, [dispatch]);
     
-    console.log(subReddits);
-
 
     return (
         <section>
-            <label></label>
+            <label>{selectedSubReddit}</label>
             <select>
-                {/* {.map(subReddit => <options value={}>{}</options>)} */}
+                {subReddits.map( subReddit => (
+                    <option 
+                        value={subReddit.name} 
+                        key={subReddit.id}
+                        onChange={()=> dispatch(changeSelectedSubReddit(subReddit.url))}
+                        >{subReddit.url}
+                        </option>
+                    )
+                )}
             </select>
         </section>
     );
