@@ -35,18 +35,20 @@ export function SubReddits(props) {
             })
     }, [dispatch]);
     
+    const handleChange = (e) =>{
+        dispatch(changeSelectedSubReddit(e.target.value))
+    };
 
     return (
         <section>
-            <label>{selectedSubReddit}</label>
-            <select>
+            <label>Sub Reddits</label>
+            <select onChange={handleChange}>
                 {subReddits.map( subReddit => (
                     <option 
-                        value={subReddit.name} 
+                        value={subReddit.url} 
                         key={subReddit.id}
-                        onChange={()=> dispatch(changeSelectedSubReddit(subReddit.url))}
                         >{subReddit.url}
-                        </option>
+                    </option>
                     )
                 )}
             </select>
