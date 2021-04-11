@@ -49,8 +49,8 @@ export function SubReddits() {
                         key={subReddit.id}
                         >{subReddit.url}
                     </option>
-                    )
-                )}
+
+                ))}
             </select>
         </section>
     );

@@ -18,9 +18,8 @@ export function SearchBar() {
     
 
     return (
-        <div>
+        <div id="searchBar">
             <input 
-                id="searchBar" 
                 placeholder="Search for posts..."
                 type="text"
                 value={searchTerm}

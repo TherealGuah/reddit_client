@@ -1,13 +1,25 @@
 #searchBar {
     height: 40px;
+    color: black;
+    background-color: whitesmoke;
 }
-#searchButton {
-    height: 40px;
-    width: 50px;
+#searchBar input {
+    border:transparent;
+    background-color: whitesmoke;
+    height: 30px;
 }
-
+#searchBar input:focus {
+    outline: none;
+}
+.fa-search{
+    opacity: 0.4;
+    font-size: 1.25rem;
+}
+.fa-times-circle {
+    font-size: 1.25rem;
+}
 @media only screen and (min-width: 660px) {
-    #searchBar {
+    #searchBar input{
         width: 300px;
     }
 }
