@@ -14,7 +14,7 @@ export function ToggleTheme() {
     return (
         <div id="toggle">
             <i className={theme ? "fas fa-toggle-on" : "fas fa-toggle-off"} onClick={handleThemeChange}></i>
-            <p className="theme">Change Theme</p>
+            <p className="theme">{theme ? " Dark Theme" : "Light Theme"}</p>
         </div>
     );
 };
