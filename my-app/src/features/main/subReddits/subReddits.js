@@ -16,7 +16,7 @@ import {
 
 
 
-export function SubReddits(props) {
+export function SubReddits() {
     const dispatch = useDispatch();
     const subReddits = useSelector(selectSubReddits);
     const selectedSubReddit = useSelector(selectSubReddit);
