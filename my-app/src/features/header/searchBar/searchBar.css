@@ -7,16 +7,21 @@
     border:transparent;
     background-color: whitesmoke;
     height: 30px;
+    margin: 10px;
 }
 #searchBar input:focus {
     outline: none;
+    border-bottom: 1px solid rgb(30,30,30);
 }
 .fa-search{
     opacity: 0.4;
     font-size: 1.25rem;
+    margin: 10px;
 }
 .fa-times-circle {
+    opacity: 0.6;
     font-size: 1.25rem;
+    margin: 10px;
 }
 @media only screen and (min-width: 660px) {
     #searchBar input{
