@@ -15,18 +15,22 @@ export function SearchBar() {
     const handleTextChange = (event) => {
         dispatch(newSearchTerm(event.target.value))
     };
+    
 
     return (
         <div>
             <input 
                 id="searchBar" 
-                placeholder="Search for Posts"
+                placeholder="Search for posts..."
                 type="text"
                 value={searchTerm}
                 onChange={handleTextChange}
             >
             </input>
-            <button id="searchButton"><i className="fas fa-search"></i></button>
+            <i 
+                className={ searchTerm.length === 0 ? "fas fa-search" : "far fa-times-circle"} 
+                onClick={() => dispatch(newSearchTerm(""))}
+            ></i>
         </div>
     );
 };

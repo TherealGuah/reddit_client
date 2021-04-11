@@ -41,7 +41,7 @@ export function SubReddits() {
 
     return (
         <section>
-            <label>Sub Reddits</label>
+            <label>Select the desired Sub Reddit</label>
             <select onChange={handleChange}>
                 {subReddits.map( subReddit => (
                     <option 
