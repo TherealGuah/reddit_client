@@ -2,12 +2,11 @@ import React from 'react';
 import './subReddits.css';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
 //API json
 import { getSubReddits } from '../../../app/API/Reddit';
 //selectors + actions
 import {
-    selectSubReddit,
+    //selectSubReddit,
     selectSubReddits, 
     addSubReddit,
     changeSelectedSubReddit
@@ -19,7 +18,7 @@ import {
 export function SubReddits() {
     const dispatch = useDispatch();
     const subReddits = useSelector(selectSubReddits);
-    const selectedSubReddit = useSelector(selectSubReddit);
+    //const selectedSubReddit = useSelector(selectSubReddit);
     
     useEffect( () => {
         getSubReddits().then(jsonResponse => {
@@ -41,8 +40,7 @@ export function SubReddits() {
 
     return (
         <section id="subReddits">
-            <label><h1>Sub Reddits</h1></label>
-            <br/>
+            <h1>Sub Reddits</h1>
             <select className="selectForm" onChange={handleChange}>
                 {subReddits.map( subReddit => (
                     <option className="selectOption"
