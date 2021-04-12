@@ -28,7 +28,7 @@ export function PostsList() {
     return (
         <div>
             <Link to="/Post">
-                
+                <p>{posts[0].title}</p>
             </Link>
         </div>
     );
