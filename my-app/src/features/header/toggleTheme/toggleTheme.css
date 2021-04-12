@@ -1,6 +1,7 @@
 #toggle i {
     font-size: 3rem;
-    color: rgb(30,30,30)
+    color: rgb(30,30,30);
+    cursor: pointer;
 }
 #toggle p {
     width: 75px;

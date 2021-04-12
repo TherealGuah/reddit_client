@@ -41,10 +41,11 @@ export function SubReddits() {
 
     return (
         <section id="subReddits">
-            <label>Select the desired Sub Reddit</label>
-            <select onChange={handleChange}>
+            <label><h1>Sub Reddits</h1></label>
+            <br/>
+            <select className="selectForm" onChange={handleChange}>
                 {subReddits.map( subReddit => (
-                    <option 
+                    <option className="selectOption"
                         value={subReddit.url} 
                         key={subReddit.id}
                         >{subReddit.url}
