@@ -4,7 +4,7 @@ const options = {
     name: 'posts',
     initialState: [],
     reducers: {
-        addPosts: (state, action) => state= action.payload,
+        addPosts: (state, action) => state = action.payload,
     },
 };
 

@@ -8,7 +8,7 @@
     margin: 10%;
 }
 @media only screen and (max-width: 425px) {
-    div p {
+    #toggle p {
         display: none;
     }
 

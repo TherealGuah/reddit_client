@@ -6,7 +6,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getSubReddits } from '../../../app/API/Reddit';
 //selectors + actions
 import {
-    //selectSubReddit,
     selectSubReddits, 
     addSubReddit,
     changeSelectedSubReddit
@@ -18,7 +17,6 @@ import {
 export function SubReddits() {
     const dispatch = useDispatch();
     const subReddits = useSelector(selectSubReddits);
-    //const selectedSubReddit = useSelector(selectSubReddit);
     
     useEffect( () => {
         getSubReddits().then(jsonResponse => {
