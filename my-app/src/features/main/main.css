@@ -1,3 +1,23 @@
+main {
+    max-width: 1024px;
+    margin: auto;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    overflow: scroll;
+}
+
 #posts {
     clear: both;
+    width: 80%;
+    margin: auto;
+}
+
+@media only screen and (min-width: 660px) {
+    
+    #posts {
+        clear: none;
+        float: left;
+        width: 60%;
+        margin: auto;
+    }
 }
