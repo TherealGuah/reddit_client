@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getSubReddits } from '../../../app/API/Reddit';
 //selectors + actions
 import {
+    selectSubReddit,
     selectSubReddits, 
     addSubReddit,
     changeSelectedSubReddit
@@ -17,7 +18,7 @@ import {
 export function SubReddits() {
     const dispatch = useDispatch();
     const subReddits = useSelector(selectSubReddits);
-    
+    const selectedSubReddit = useSelector(selectSubReddit);
     useEffect( () => {
         getSubReddits().then(jsonResponse => {
                 jsonResponse.forEach(dataItem => dispatch(
@@ -39,12 +40,18 @@ export function SubReddits() {
     return (
         <section id="subReddits">
             <h1>Sub Reddits</h1>
-            <select className="selectForm" onChange={handleChange}>
+            <select 
+                className="selectForm" 
+                onChange={handleChange}
+                value={selectedSubReddit}
+            >
                 {subReddits.map( subReddit => (
-                    <option className="selectOption"
+                    <option 
+                        className="selectOption"
                         value={subReddit.url} 
                         key={subReddit.id}
-                        >{subReddit.url}
+                    >
+                            {subReddit.url}
                     </option>
                 ))}
             </select>

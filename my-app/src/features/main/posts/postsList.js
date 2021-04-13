@@ -34,7 +34,7 @@ export function PostsList() {
     };
     
 
-    console.log(filteredPosts);
+    // console.log(filteredPosts);
     return (
         <div id="postsItem">
             {filteredPosts.map( post => (
