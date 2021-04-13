@@ -8,6 +8,7 @@ import { useEffect } from 'react';
 import { addPosts } from './postsSlice';
 import { selectPosts } from './postsSlice'; 
 import { selectSearchTerm } from '../../header/searchBar/searchSlice';
+import { dateCalculator } from '../../utilities/utils';
 
 export function PostsList() {
     
@@ -24,7 +25,7 @@ export function PostsList() {
             //console.log(jsonData);
             dispatch(addPosts(jsonData))
         });
-    }, [activeSubReddit]); 
+    }, [activeSubReddit, dispatch]); 
 
     const filteredPosts = posts.filter(post => post.title.toLowerCase().includes(searchTerm.toLowerCase()));
 
@@ -50,7 +51,7 @@ export function PostsList() {
                     </Link>
                     <div className="postFoot">
                         <p>By: {post.author}</p>
-                        <p>created {post.created_utc} ago</p>
+                        <p>{dateCalculator(post.created_utc)}</p>
                         <p>
                             <i className="far fa-comments"></i> {post.num_comments}
                         </p>
@@ -65,3 +66,4 @@ export function PostsList() {
         </div>
     );
 };
+// Date.now()
