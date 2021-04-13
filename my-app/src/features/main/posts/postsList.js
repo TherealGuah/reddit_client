@@ -29,7 +29,6 @@ export function PostsList() {
         target.style.display = "none";
     };
 
-
     console.log(posts);
     return (
         <div id="postsItem">
@@ -37,9 +36,14 @@ export function PostsList() {
                 <div className="singlePost" key={post.id}>
                     <Link to="/Post">
                         <h1>{post.title}</h1>
+                        <p >{post.selftext}</p>
+                        <img src={post.url} alt="" onError={handleImgError}/>
                     </Link>
-                    <p >{post.selftext}</p>
-                    <img src={post.url} alt="" onError={handleImgError}/>
+                    <div>
+                        <p>{post.author}</p>
+                        <p>Comments: {post.num_comments}</p>
+                        <p>{post.score}</p>
+                    </div>
                 </div>)
             )}
         </div>
