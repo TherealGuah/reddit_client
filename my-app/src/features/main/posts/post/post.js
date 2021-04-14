@@ -5,11 +5,9 @@ export const Post = () => {
 
 return (
     <div>
-        <div>
-            <Link to="/">
-                <p>Back to Posts</p>
-            </Link>
-        </div>
+        <Link to="/">
+            <p>Back to Posts</p>
+        </Link>
         <p> Im the post</p>
     </div>
 );

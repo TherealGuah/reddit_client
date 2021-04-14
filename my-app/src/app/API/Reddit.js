@@ -27,8 +27,8 @@ export const getSubredditPosts = async (subreddit) => {
     const response = await fetch(url);
     const json = await response.json();
     const postComments = json[1].data.children.map((subreddit) => subreddit.data);
-    // console.log(postComments); //test
+    //console.log(postComments); //test
     return postComments;
   };
-  //getPostComments("/r/Home/comments/mp5wef/washer_to_regular_outlet/");
+  //const comm = getPostComments("/r/Home/comments/mp5wef/washer_to_regular_outlet/");
 

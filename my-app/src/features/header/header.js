@@ -6,7 +6,7 @@ import { SearchBar } from './searchBar/searchBar';
 import { ToggleTheme } from './toggleTheme/toggletheme';
 import { useDispatch } from 'react-redux';
 import { changeSelectedSubReddit } from '../main/subReddits/subRedditsSlice';
-import { subReddits } from '../main/subReddits/subReddits';
+
 
 export function Header() {
     const dispatch = useDispatch();
