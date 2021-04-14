@@ -4,8 +4,6 @@ header {
     align-items: center;
     border: 1px solid black;
     height: 75px;
-    background-color: rgb(95,158,160);
-    color: rgb(255,249,220);
 }
 header div {
    display: flex;

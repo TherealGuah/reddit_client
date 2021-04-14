@@ -3,7 +3,7 @@ import {
     Switch,
     Route
 } from "react-router-dom";
-import './main.css';
+import styles from './main.module.css';
 // components
 import { SubReddits } from './subReddits/subReddits';
 import { PostsList } from './posts/postsList';
@@ -14,7 +14,7 @@ export function Main() {
     return (
         <main>
             <SubReddits />
-            <section id="posts">
+            <section id={styles.posts}>
                 <Switch >
                     <Route exact path="/">
                         <PostsList />

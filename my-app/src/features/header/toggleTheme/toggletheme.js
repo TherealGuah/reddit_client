@@ -1,5 +1,5 @@
 import React from 'react';
-import './toggleTheme.css';
+import styles from './toggleTheme.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectTheme, toggleTheme } from './toggleSlice';
 
@@ -12,9 +12,9 @@ export function ToggleTheme() {
     }
 
     return (
-        <div id="toggle">
+        <div id={styles.toggle}>
             <i className={theme ? "fas fa-toggle-on" : "fas fa-toggle-off"} onClick={handleThemeChange}></i>
-            <p className="theme">{theme ? " Dark Theme" : "Light Theme"}</p>
+            <p className={styles.theme}>{theme ? " Dark Theme" : "Light Theme"}</p>
         </div>
     );
 };

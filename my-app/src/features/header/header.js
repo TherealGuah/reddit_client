@@ -1,5 +1,5 @@
 import React from 'react';
-import './header.css';
+import styles from './header.module.css';
 import { Link } from 'react-router-dom';
 import redditLogo from './reddit-logo.png';
 import { SearchBar } from './searchBar/searchBar';

@@ -1,5 +1,5 @@
 import React from 'react';
-import './searchBar.css';
+import styles from './searchBar.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { 
     selectSearchTerm,
@@ -18,7 +18,7 @@ export function SearchBar() {
     
 
     return (
-        <div id="searchBar">
+        <div id={styles.searchBar}>
             <input 
                 placeholder="Search for posts..."
                 type="text"

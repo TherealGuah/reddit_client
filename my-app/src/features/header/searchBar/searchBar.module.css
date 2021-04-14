@@ -1,11 +1,10 @@
 #searchBar {
     height: 40px;
-    color: black;
-    background-color: whitesmoke;
+    
 }
 #searchBar input {
     border:transparent;
-    background-color: whitesmoke;
+    
     height: 30px;
     margin: 10px;
 }

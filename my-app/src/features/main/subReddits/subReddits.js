@@ -1,5 +1,5 @@
 import React from 'react';
-import './subReddits.css';
+import styles from './subReddits.module.css';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 //API json
@@ -38,20 +38,20 @@ export function SubReddits() {
     };
 
     return (
-        <section id="subReddits">
+        <section id={styles.subReddits}>
             <h1>Sub Reddits</h1>
             <select 
-                className="selectForm" 
+                className={styles.selectForm} 
                 onChange={handleChange}
                 value={selectedSubReddit}
             >
                 {subReddits.map( subReddit => (
                     <option 
-                        className="selectOption"
+                        className={styles.selectOption}
                         value={subReddit.url} 
                         key={subReddit.id}
                     >
-                            {subReddit.url}
+                        {subReddit.url}
                     </option>
                 ))}
             </select>
