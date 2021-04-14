@@ -1,10 +1,10 @@
 #searchBar {
     height: 40px;
-    
+    background-color: white;
+    color: black;
 }
 #searchBar input {
     border:transparent;
-    
     height: 30px;
     margin: 10px;
 }
@@ -12,13 +12,13 @@
     outline: none;
     border-bottom: 1px solid rgb(30,30,30);
 }
-.fa-search{
-    opacity: 0.4;
+#search {
+    opacity: 0.5;
     font-size: 1.25rem;
     margin: 10px;
 }
-.fa-times-circle {
-    opacity: 0.6;
+#circle {
+    opacity: 0.5;
     font-size: 1.25rem;
     margin: 10px;
 }

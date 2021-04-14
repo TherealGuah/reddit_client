@@ -4,13 +4,20 @@ import {
 import styles from './App.module.css';
 import { Header } from '../features/header/header';
 import { Main } from '../features/main/main';
+import {selectTheme } from '../features/header/toggleTheme/toggleSlice';
+import {useSelector} from 'react-redux';
 
 function App() {
+  const theme = useSelector(selectTheme);
+
   return (
-  <Router>
-    <Header />
-    <Main />
-  </Router>);
+    <body className={theme ? styles.darkTheme : styles.lightTheme}>
+      <Router>
+        <Header />
+        <Main />
+      </Router>
+    </body>
+  );
 }
 
 export default App;

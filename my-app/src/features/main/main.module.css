@@ -4,6 +4,14 @@ main {
     border: 1px solid black;
     overflow: scroll;
 }
+.lightTheme {
+    background-color: whitesmoke;
+    color: black;
+}
+.darkTheme {
+    background-color: gray;
+    color: white;
+}
 
 #posts {
     clear: both;

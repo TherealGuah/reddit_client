@@ -8,11 +8,14 @@ import styles from './main.module.css';
 import { SubReddits } from './subReddits/subReddits';
 import { PostsList } from './posts/postsList';
 import { Post } from './posts/post/post';
+import { useSelector } from 'react-redux';
+import { selectTheme } from '../header/toggleTheme/toggleSlice';
 
 export function Main() {
+    const theme = useSelector(selectTheme);
 
     return (
-        <main>
+        <main className={theme ? styles.darkTheme : styles.lightTheme}>
             <SubReddits />
             <section id={styles.posts}>
                 <Switch >

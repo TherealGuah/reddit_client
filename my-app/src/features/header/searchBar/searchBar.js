@@ -26,8 +26,8 @@ export function SearchBar() {
                 onChange={handleTextChange}
             >
             </input>
-            <i 
-                className={ searchTerm.length === 0 ? "fas fa-search" : "far fa-times-circle"} 
+            <i  id={searchTerm.lenght === 0 ? styles.search : styles.circle}
+                className={ searchTerm.length === 0 ? "fas fa-search" : "far fa-times-circle"}
                 onClick={() => dispatch(newSearchTerm(""))}
             ></i>
         </div>

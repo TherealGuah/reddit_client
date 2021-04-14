@@ -27,6 +27,13 @@ header a {
     font-weight: 900;
     font-size: 1.5rem;
 }
+.lightTheme {
+    background-color: rgb(95,158,160);
+    color: rgb(255,248,220);
+}
+.darkTheme {
+    
+}
 
 @media only screen and (max-width: 480px) {
     header p {
