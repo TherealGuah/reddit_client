@@ -1,12 +1,14 @@
 import React from'react';
 import styles from './footer.module.css';
 import { useState } from 'react';
+import {useSelector } from 'react-redux';
 import { dateCalculator } from '../../../utilities/utils'; 
 import { Comments } from '../comments/comments';
+import { selectTheme } from '../../../header/toggleTheme/toggleSlice';
 
 export const Footer = (props) => {
     const [active, setActive] = useState(false);
-
+    const theme = useSelector(selectTheme);
 
     const onCommentsClicked = () => {
         const postComments = document.getElementById(props.postId);
@@ -20,9 +22,9 @@ export const Footer = (props) => {
     }
 
     return (
-        <footer>
+        <footer className={theme ? styles.darkTheme : styles.lightTheme}>
             <ul className={styles.postInfos}>
-                <li><span>{props.postAuthor}</span></li>
+                <li>Posted by: <span>{props.postAuthor}</span></li>
                 <li>{dateCalculator(props.postCreated)}</li>
                 <li onClick={onCommentsClicked} className={styles.commentsIcon}><i className="far fa-comments"></i><span>{props.postComments}</span></li>
             </ul>

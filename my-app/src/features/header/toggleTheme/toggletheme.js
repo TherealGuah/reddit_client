@@ -12,7 +12,7 @@ export function ToggleTheme() {
     }
 
     return (
-        <div id={styles.toggle}>
+        <div id={styles.toggle} className={theme ? styles.darkTheme : styles.lightTheme}>
             <i className={theme ? "fas fa-toggle-on" : "fas fa-toggle-off"} onClick={handleThemeChange}></i>
             <p className={styles.theme}>{theme ? " Dark Theme" : "Light Theme"}</p>
         </div>

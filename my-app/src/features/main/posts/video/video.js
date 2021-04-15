@@ -1,5 +1,5 @@
 import React from 'react';
-
+import styles from './video.module.css';
 
 export const Video = (props) => {
     const { postMedia, postUrl } = props;
@@ -15,12 +15,12 @@ export const Video = (props) => {
         );
         }
 
-        return postUrl;
+        return <a href={postUrl} target="_blank" rel="noreferrer">{postUrl}</a>;
     };
     
     // console.log(postMedia);
 
     return (
-        <div>{videoSource()}</div>
+        <div className={styles.video}>{videoSource()}</div>
         );
 };

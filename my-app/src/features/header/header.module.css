@@ -32,7 +32,8 @@ header a {
     color: rgb(255,248,220);
 }
 .darkTheme {
-    
+    background-color: rgb(30,30,30);
+    color: rgb(1240,240,240);
 }
 
 @media only screen and (max-width: 480px) {

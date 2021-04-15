@@ -1,27 +1,37 @@
-
-
-#postsItem p {
+#link {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin: 2%;
+    width: 100%;
+    color: inherit;
+}
+.postsItem p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin:2%
 }
 
-#postsItem img {
+.postsItem img {
     width: 100%;
     height: auto;
 
 }
 .singlePost {
     border: 1px solid black;
+    margin: 2.5%;
     
+}
+.singlePost h2 {
+    margin: 2%;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 .postFoot {
     display: flex;
     justify-content: space-around;
 }
-#comments {
-    display:none;
-}
+
 .video{
     display: block;
 }

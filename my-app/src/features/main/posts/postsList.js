@@ -12,6 +12,7 @@ import { Footer } from "./footer/footer";
 import { Video } from './video/video';
 import { changeActivePostId } from './post/postSlice';
 
+
 export function PostsList() {
     
     const posts = useSelector(selectPosts);
@@ -39,7 +40,7 @@ export function PostsList() {
             {filteredPosts.map( post => (
                 <div className={styles.singlePost} key={post.id}>
                     <Link to="/Post" onClick={() => dispatch(changeActivePostId(post.name))}>
-                        <h1>{post.title}</h1>
+                        <h2>{post.title}</h2>
                         <p>{post.selftext}</p>
                         <img src={post.url} alt="" onError={handleImgError}/>
                         <div className={post.media ? styles.video : styles.noVideo}>

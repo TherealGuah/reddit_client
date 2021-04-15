@@ -1,15 +1,21 @@
-.comment {
-    background-color: #f5f5f5;
-    border-bottom: 1px solid #f0f0f0;
-
-    padding: 5px 15px 5px 15px;
-    margin: 10px 0;
-    line-height: 1.5rem;
-    font-size: 1.1rem;
+#comment {
+    border: 1px solid rgb(200, 200, 200);
+    width: 95%;
+    margin: 10px auto; 
+}
+#comment p {
+    white-space: normal;
+    text-overflow: initial;
+    overflow: auto;
 }
 
-.commentAuthor {
+.commentAuthorDark {
     font-weight: bold;
+    color:rgb(243,97,0);
+}
+.commentAuthorLight {
+    font-weight: bold;
+    color:rgb(95,158,160);
 }
 
 .isNotShown {
@@ -24,4 +30,12 @@
 .commentDate {
     font-size: 0.7rem;
     font-style: italic;
+}
+
+.darkTheme {
+    background-color: rgb(30,30,30);   
+}
+
+.lightTheme { 
+    background-color: rgb(240, 240, 240);
 }
