@@ -11,12 +11,12 @@ function App() {
   const theme = useSelector(selectTheme);
 
   return (
-    <body className={theme ? styles.darkTheme : styles.lightTheme}>
+    <div className={theme ? styles.darkTheme : styles.lightTheme}>
       <Router>
         <Header />
         <Main />
       </Router>
-    </body>
+    </div>
   );
 }
 

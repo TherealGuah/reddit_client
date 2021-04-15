@@ -22,7 +22,12 @@
 #comments {
     display:none;
 }
-
+.video{
+    display: block;
+}
+.noVideo {
+    display: none;
+}
 @media only screen and (min-width: 660px) {
     #posts {
         margin: 5%;

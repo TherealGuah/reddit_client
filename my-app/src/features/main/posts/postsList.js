@@ -1,27 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './postsList.module.css'
-import { /*getPostComments,*/ getSubredditPosts } from '../../../app/API/Reddit';
+import { getSubredditPosts } from '../../../app/API/Reddit';
 import { selectSubReddit } from '../subReddits/subRedditsSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect, useState } from 'react';
+import { useEffect} from 'react';
 import { addPosts } from './postsSlice';
 import { selectPosts } from './postsSlice'; 
 import { selectSearchTerm } from '../../header/searchBar/searchSlice';
-import { dateCalculator } from '../../utilities/utils';
 import { Footer } from "./footer/footer";
-// import { Comments } from '../comments/comments';
-
-
+import { Video } from './video/video';
 
 export function PostsList() {
-    const [active, setActive] = useState(false);
+    
     const posts = useSelector(selectPosts);
     const activeSubReddit = useSelector(selectSubReddit);
     const searchTerm = useSelector(selectSearchTerm);
     const dispatch = useDispatch();
-
-    
 
     useEffect( () => {
         getSubredditPosts(activeSubReddit)
@@ -36,7 +31,6 @@ export function PostsList() {
     function handleImgError({target}) {
         target.style.display = "none";
     };
-
     
     console.log(filteredPosts);
     return (
@@ -47,10 +41,9 @@ export function PostsList() {
                         <h1>{post.title}</h1>
                         <p>{post.selftext}</p>
                         <img src={post.url} alt="" onError={handleImgError}/>
-                        {/* <video width="100%" controls style={(post.media)? {display: "block"} : {display: "none"}}>
-                            <source src={post.media ? post.media.reddit_video.fallback_url : ""} type="video/mp4"></source>
-                            Your browser doesn't support the video tag.
-                        </video> */}
+                        <div className={post.media ? styles.video : styles.noVideo}>
+                            <Video postMedia={post.media} postUrl={post.url}/>
+                        </div>
                         <p>{!post.media && post.url ? post.url : ""}</p>
                     </Link>
                     <Footer

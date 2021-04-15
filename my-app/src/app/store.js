@@ -3,7 +3,7 @@ import toggleThemeSlice from '../features/header/toggleTheme/toggleSlice';
 import searchBarSlice from '../features/header/searchBar/searchSlice';
 import subRedditsSlice from '../features/main/subReddits/subRedditsSlice';
 import postsSlice from '../features/main/posts/postsSlice';
-import commentsSlice from '../features/main/comments/commentsSlice';
+import commentsSlice from '../features/main/posts/comments/commentsSlice';
 
 export default configureStore({
   reducer: {

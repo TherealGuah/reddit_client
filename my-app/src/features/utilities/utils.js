@@ -1,3 +1,4 @@
+
 export const dateCalculator = (created) => {
     const currentDate = Date.now();
     const postDate = new Date(created * 1000);
@@ -22,4 +23,4 @@ export const dateCalculator = (created) => {
     } else {
         return "less than a minute ago";
     }
-}
+};
