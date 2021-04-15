@@ -7,16 +7,18 @@ import { selectPosts } from '../postsSlice';
 import { Video}  from '../video/video';
 import { Footer } from '../footer/footer';
 import styles from './post.module.css';
-
+import  {selectTheme} from  '../../../header/toggleTheme/toggleSlice';
 
 export const Post = () => {
     
     const postId = useSelector(selectPost);
     const selectedSubReddit = useSelector(selectSubReddit);
     const posts = useSelector(selectPosts);
-    
+    const theme  = useSelector(selectTheme);
+
+
     const selectedPost = posts.filter(post => post.name === postId)
-    console.log(selectedPost);
+    // console.log(selectedPost);
     
     function handleImgError({target}) {
         target.style.display = "none";
@@ -27,7 +29,7 @@ export const Post = () => {
             {selectedPost.map( post => (
                 <div className={styles.singlePost} key={post.id}>
                     <Link to="/">
-                        <button className={styles.backButton}>Back to {selectedSubReddit}</button>
+                        <button className={theme? styles.backButtonDark : styles.backButtonLight}>Back to {selectedSubReddit}</button>
                     </Link>
                     <h2>{post.title}</h2>
                     <p>{post.selftext}</p>
