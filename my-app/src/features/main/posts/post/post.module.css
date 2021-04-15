@@ -1,0 +1,36 @@
+
+
+#postsItem p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#postsItem img {
+    width: 100%;
+    height: auto;
+
+}
+.singlePost {
+    border: 1px solid black;
+    
+}
+.postFoot {
+    display: flex;
+    justify-content: space-around;
+}
+#comments {
+    display:none;
+}
+.video{
+    display: block;
+}
+.noVideo {
+    display: none;
+}
+@media only screen and (min-width: 660px) {
+    #posts {
+        margin: 5%;
+        margin-right: 0%;
+    }
+}

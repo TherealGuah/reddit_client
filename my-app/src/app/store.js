@@ -4,7 +4,7 @@ import searchBarSlice from '../features/header/searchBar/searchSlice';
 import subRedditsSlice from '../features/main/subReddits/subRedditsSlice';
 import postsSlice from '../features/main/posts/postsSlice';
 import commentsSlice from '../features/main/posts/comments/commentsSlice';
-
+import postSlice from '../features/main/posts/post/postSlice';
 export default configureStore({
   reducer: {
     toggle: toggleThemeSlice,
@@ -12,5 +12,6 @@ export default configureStore({
     subReddits: subRedditsSlice,
     posts: postsSlice,
     comments: commentsSlice,
+    post: postSlice,
   },
 });

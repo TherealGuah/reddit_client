@@ -10,6 +10,7 @@ import { selectPosts } from './postsSlice';
 import { selectSearchTerm } from '../../header/searchBar/searchSlice';
 import { Footer } from "./footer/footer";
 import { Video } from './video/video';
+import { changeActivePostId } from './post/postSlice';
 
 export function PostsList() {
     
@@ -37,7 +38,7 @@ export function PostsList() {
         <div id={styles.postsItem}>
             {filteredPosts.map( post => (
                 <div className={styles.singlePost} key={post.id}>
-                    <Link to="/Post">
+                    <Link to="/Post" onClick={() => dispatch(changeActivePostId(post.name))}>
                         <h1>{post.title}</h1>
                         <p>{post.selftext}</p>
                         <img src={post.url} alt="" onError={handleImgError}/>
