@@ -27,7 +27,7 @@ export const Post = () => {
             {selectedPost.map( post => (
                 <div className={styles.singlePost} key={post.id}>
                     <Link to="/">
-                        <button>Back to {selectedSubReddit}</button>
+                        <button className={styles.backButton}>Back to {selectedSubReddit}</button>
                     </Link>
                     <h2>{post.title}</h2>
                     <p>{post.selftext}</p>

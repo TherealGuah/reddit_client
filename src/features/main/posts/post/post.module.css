@@ -31,6 +31,11 @@
     display: flex;
     justify-content: space-around;
 }
+.backButton {
+    width: 200px;
+    height: 50px;
+    
+}
 
 .video{
     display: block;
