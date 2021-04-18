@@ -1,9 +1,8 @@
 main {
     max-width: 1024px;
-    margin: auto;
+    margin: 1% auto;
     border: 1px solid black;
     overflow: scroll;
-    margin: 1% auto;
 }
 .lightTheme {
     background-color: whitesmoke;
@@ -26,7 +25,6 @@ main {
 #posts {
     clear: both;
     width: 100%;
-    margin: auto;
 }
 
 @media only screen and (min-width: 660px) {
